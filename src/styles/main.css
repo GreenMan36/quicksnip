@@ -14,6 +14,8 @@
 }
 
 :root {
+  /* default colors */
+  color-scheme: dark;
   --clr-neutral-200: #e0e0e0;
   --clr-neutral-300: #b3b3b3;
   --clr-neutral-500: #3c3c3c;
@@ -71,6 +73,15 @@
   --clr-neutral-500: hsl(0, 0%, 85%);
   --clr-neutral-700: hsl(0, 0%, 95%);
   --clr-neutral-900: hsl(60, 25%, 98%);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --clr-neutral-200: #e0e0e0;
+  --clr-neutral-300: #b3b3b3;
+  --clr-neutral-500: #3c3c3c;
+  --clr-neutral-700: #2a2a2a;
+  --clr-neutral-900: #1c1c1c;
 }
 
 /*------------------------------------*\
@@ -579,13 +590,14 @@ body:has(.modal-overlay) {
 
 .modal__copy {
   position: absolute;
+  display: flex;
   top: 0.5em;
   right: 1.2em;
   z-index: 10;
   isolation: isolate;
 }
 
-.modal__copy:hover {
+.modal__copy *:hover {
   background: var(--bg-primary);
 }
 
